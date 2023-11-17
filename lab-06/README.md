@@ -6,7 +6,7 @@
 * `Pedro Sanchez Bitencourt` - `231133`
 
 ## Comandos Avançados em Cypher
-#####1- Faça a projeção em relação a Patologia, ou seja, conecte patologias que são tratadas pela mesma droga.
+**1- Faça a projeção em relação a Patologia, ou seja, conecte patologias que são tratadas pela mesma droga.**
 
 Resolução:
 Projeção:
@@ -23,7 +23,8 @@ RETURN p1, p2
 LIMIT 20
 ```
 
-####Código cypher usado na leitura e criação das relações para os próximos dois exercícios:
+
+**Código cypher usado na leitura e criação das relações para os próximos dois exercícios:**
 Leitura dos arquivos e criação das relações:
 ```
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/santanche/lab2learn/master/data/faers-2017/pathology.csv' AS line
@@ -62,7 +63,7 @@ ON CREATE SET h.weight=1
 ON MATCH SET h.weight=h.weight+1
 ```
 
-#####2- Construa um grafo ligando os medicamentos aos efeitos colaterais (com pesos associados) a partir dos registros das pessoas, ou seja, se uma pessoa usa um medicamento e ela teve um efeito colateral, o medicamento deve ser ligado ao efeito colateral.
+**2- Construa um grafo ligando os medicamentos aos efeitos colaterais (com pesos associados) a partir dos registros das pessoas, ou seja, se uma pessoa usa um medicamento e ela teve um efeito colateral, o medicamento deve ser ligado ao efeito colateral.**
 
 Resolução:
 Projeção:
@@ -78,7 +79,7 @@ MATCH (d:Drug)<-[:Consequence]->(pa:Pathology)
 RETURN d, pa
 LIMIT 20
 ```
-#####3- Que tipo de análise interessante pode ser feita com esse grafo?
+**3- Que tipo de análise interessante pode ser feita com esse grafo?**
 
 Proponha um tipo de análise e escreva uma sentença em Cypher que realize a análise.
 
