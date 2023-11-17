@@ -8,8 +8,8 @@
 ## Comandos Avançados em Cypher
 **1- Faça a projeção em relação a Patologia, ou seja, conecte patologias que são tratadas pela mesma droga.**
 
-Resolução:
-Projeção:
+Resolução:</br>
+Projeção:</br>
 ```
 MATCH (p1:Pathology)<-[a]-(d:Drug)-[b]->(p2:Pathology)
 MERGE (p1)<-[c:Connect]->(p2)
@@ -65,7 +65,7 @@ ON MATCH SET h.weight=h.weight+1
 
 **2- Construa um grafo ligando os medicamentos aos efeitos colaterais (com pesos associados) a partir dos registros das pessoas, ou seja, se uma pessoa usa um medicamento e ela teve um efeito colateral, o medicamento deve ser ligado ao efeito colateral.**
 
-Resolução:
+Resolução:</br>
 Projeção:
 ```
  MATCH (pa:Pathology)<-[a]-(pe:Person)-[b]->(d:Drug)
@@ -83,7 +83,7 @@ LIMIT 20
 
 Proponha um tipo de análise e escreva uma sentença em Cypher que realize a análise.
 
-Resolução:
+Resolução:</br>
 Uma possível analise seria encontrar um medicamento que tenha ao menos 40 ocorrências de pelo menos 1 medicamento, apontando assim os medicamentos que teriam mais efeitos colaterais registrados.
 
 Resultado:
