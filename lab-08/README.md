@@ -23,4 +23,4 @@
 
 ### Pergunta/Análise 3
 > * Quais receitas são prováveis de começar a usar uma nova commodity com base em suas relações existentes?
->   * TODO
+>   * Usando a predição de links, podemos analisar e prever novas relações de "Uses" calculando a probabilidade, utilizando vários fatores, como similaridade, popularidade dos nós, entre outros. Assim, isso nos dará as receitas que são prováveis de começar a usar uma nova commodity.
